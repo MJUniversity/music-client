@@ -1,6 +1,13 @@
 # music
 
-> A Vue.js project
+> music前台
+
+##版本说明：
+``` bash
+node -v ： v12.9.0
+vue -V  ： 2.9.6
+npm -v  :  6.10.2
+```
 
 ## Build Setup
 
