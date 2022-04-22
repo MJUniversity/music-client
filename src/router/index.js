@@ -16,7 +16,7 @@ import SongListAlbum from '@/pages/SongListAlbum'
 Vue.use(Router)
 
 export default new Router({
-  routes: [    
+  routes: [
     {
       path: '/',
       name: 'home',
@@ -72,7 +72,7 @@ export default new Router({
       name: 'song-list-album',
       component: SongListAlbum
     }
-    
+
   ],
   scrollBehavior (to, from, savedPosition) {
     return { x: 0, y: 0 }

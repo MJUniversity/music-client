@@ -5,8 +5,8 @@
     <song-audio/>
     <the-aside/>
     <play-bar/>
-    <scroll-top/> 
-    <the-footer/>  
+    <scroll-top/>
+    <the-footer/>
   </div>
 </template>
 
@@ -23,9 +23,9 @@ export default {
   components: {
     TheHeader,
     ScrollTop,
-    TheFooter,
     SongAudio,
     TheAside,
+    TheFooter,
     PlayBar
   }
 }

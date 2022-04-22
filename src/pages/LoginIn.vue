@@ -1,7 +1,7 @@
 <template>
-<div>
-    <loginLogo/>
-    <div class="signUp">
+<div class="bg">
+<!--    <loginLogo/>-->
+    <div class="signin">
         <div class="signUp-head">
             <span>帐号登录</span>
         </div>
@@ -12,7 +12,7 @@
             <el-form-item prop="password" label="密码">
                 <el-input type="password" v-model="loginForm.password" placeholder="密码"></el-input>
             </el-form-item>
-            
+
             <div class="login-btn">
                 <el-button @click="goSignUp">注册</el-button>
                 <el-button type="primary" @click="handleLoginIn">登录</el-button>
@@ -46,7 +46,7 @@ export default {
                     { required: true, trigger: 'blur',message: '请输入密码' }
                 ]
             }
-        }    
+        }
     },
     mounted() {
         this.changeIndex('登录');
@@ -64,7 +64,7 @@ export default {
                         _this.$store.commit('setLoginIn',true);
                         _this.$store.commit('setUserId',res.userMsg.id);
                         _this.$store.commit('setUsername',res.userMsg.username);
-                        _this.$store.commit('setAvator',res.userMsg.avator);                                                
+                        _this.$store.commit('setAvator',res.userMsg.avator);
                         setTimeout(function(){
                             _this.changeIndex('首页');
                             _this.$router.push({path: '/'});
@@ -89,5 +89,38 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '../assets/css/sign-up.scss';
+@import "../assets/css/var.scss";
+@import "../assets/css/global.scss";
+.bg{
+  background:url("../../static/bg.jpg") no-repeat 5px 5px;
+  width:100%;
+  height:100%;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-position: center 0;
+}
+.signin {
+  background-color: rgba(245, 249, 250,.75);
+  border-radius: 10px;
+  width: 350px;
+  margin: 265px auto;
+
+  padding: 30px 30px;
+
+  .signUp-head {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  .login-btn {
+    @include layout(space-between);
+    button {
+      display: block;
+      width: 50%;
+    }
+  }
+}
 </style>

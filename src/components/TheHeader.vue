@@ -29,7 +29,7 @@
             <img :src='attachImageUrl(avator)'>
         </div>
         <ul class="menu">
-            <li v-for="(item,index) in menuList" :key="index" @click="goMenuList(item.path)">{{item.name}}</li> 
+            <li v-for="(item,index) in menuList" :key="index" @click="goMenuList(item.path)">{{item.name}}</li>
         </ul>
     </div>
   </div>
@@ -44,7 +44,7 @@ export default {
   data() {
       return {
           navMsg: [],    //左侧导航栏
-          keywords: '',  //搜索关键字       
+          keywords: '',  //搜索关键字
           loginMsg: [],  //右侧导航栏
           menuList: [], //用户下拉菜单
       }
@@ -73,7 +73,7 @@ export default {
         document.querySelector('.menu').classList.remove('show');
       },false);
   },
-  
+
   methods: {
        //提示信息
         notify(title,type) {
@@ -91,7 +91,7 @@ export default {
           }else{
             this.$store.commit('setActiveName',name);
             this.$router.push({path: path});
-          }          
+          }
       },
       goSearch(){
           this.$router.push({path:'/search',query:{keywords: this.keywords}})

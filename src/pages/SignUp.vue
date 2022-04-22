@@ -1,6 +1,6 @@
 <template>
-<div>
-    <loginLogo/>
+<div class="bg">
+<!--    <loginLogo/>-->
     <div class="signUp">
         <div class="signUp-head">
             <span>用户注册</span>
@@ -69,7 +69,7 @@ export default {
             },
             cities: [],            //所有的地区--省
             rules: {}               //表单提交的规则
-        }        
+        }
     },
     created() {
         this.rules = rules;
@@ -113,5 +113,40 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '../assets/css/sign-up.scss';
+@import "../assets/css/var.scss";
+@import "../assets/css/global.scss";
+.bg{
+  background:url("../../static/bg.jpg") no-repeat 5px 5px;
+  width:100%;
+  height:100%;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-position: center 0;
+  background-color: rgba(245, 249, 250,.75);
+}
+.signUp {
+  background-color: rgba(245, 249, 250,.75);
+  border-radius: 10px;
+  width: 350px;
+  margin: 0px auto;
+  margin-top: 110px;
+  padding: 30px 30px;
+  margin-bottom: 45px;
+
+  .signUp-head {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  .login-btn {
+    @include layout(space-between);
+    button {
+      display: block;
+      width: 50%;
+    }
+  }
+}
 </style>

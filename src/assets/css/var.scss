@@ -30,9 +30,9 @@ $header-height: 70px;
 $header-padding: 0 80px;
 $header-margin: 0;
 $header-logo-width: 150px;
-$header-logo-margin: 0 10px;
+$header-logo-margin: 0 100px;
 $header-nav-padding: 0 10px;
-$header-nav-margin: 0 10px;
+$header-nav-margin: 0 15px;
 $header-search-radius: 5px;
 $header-search-height: ($header-height / 2);
 $header-search-width: 270px;
@@ -40,7 +40,7 @@ $header-search-btn-height: ($header-height / 2);
 $header-search-btn-width: 60px;
 $header-user-height: ($header-height / 3) * 2;
 $header-user-width: ($header-height / 3) * 2;
-$header-user-margin: 0 25px;
+$header-user-margin: 0 45px;
 $header-user-radius: 50%;
 $header-menu-width: 150px;
 $header-menu-padding: 7px 0px;
@@ -51,7 +51,7 @@ $content-padding: 0 120px 50px 120px;
 $border-radius-songlist: 12px;
 
 // footer
-$footer-height: 180px;
+$footer-height: 130px;
 
 // play-bar
 $play-bar-height: 60px;
