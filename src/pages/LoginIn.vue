@@ -92,7 +92,7 @@ export default {
 @import "../assets/css/var.scss";
 @import "../assets/css/global.scss";
 .bg{
-  background:url("../../static/bg.jpg") no-repeat 5px 5px;
+  background:url("../../src/assets/img/bg.jpg") no-repeat 5px 5px;
   width:100%;
   height:100%;
   background-size: cover;
