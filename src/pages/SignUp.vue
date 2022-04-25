@@ -19,19 +19,19 @@
                 </el-radio-group>
             </el-form-item>
             <el-form-item prop="phoneNum" label="手机">
-                <el-input v-model="registerForm.phoneNum" placeholder="手机"></el-input>
+                <el-input v-model="registerForm.phoneNum" placeholder="手机" @keyup.enter.native="SignUp"></el-input>
             </el-form-item>
             <el-form-item prop="email" label="邮箱">
-                <el-input v-model="registerForm.email" placeholder="邮箱"></el-input>
+                <el-input v-model="registerForm.email" placeholder="邮箱" @keyup.enter.native="SignUp"></el-input>
             </el-form-item>
             <el-form-item prop="birth" label="生日">
-                <el-date-picker v-model="registerForm.birth" placeholder="选择日期" style="width: 100%;"></el-date-picker>
+                <el-date-picker v-model="registerForm.birth" placeholder="选择日期" style="width: 100%;" @keyup.enter.native="SignUp"></el-date-picker>
             </el-form-item>
             <el-form-item prop="introduction" label="签名">
-                <el-input v-model="registerForm.introduction" placeholder="签名"></el-input>
+                <el-input v-model="registerForm.introduction" placeholder="签名" @keyup.enter.native="SignUp"></el-input>
             </el-form-item>
             <el-form-item prop="location" label="地区">
-                <el-select v-model="registerForm.location" placeholder="地区" style="width: 100%;">
+                <el-select v-model="registerForm.location" placeholder="地区" style="width: 100%;" @keyup.enter.native="SignUp">
                     <el-option v-for=" item in cities" :key="item.value" :label="item.label" :value="item.value"></el-option>
                 </el-select>
             </el-form-item>

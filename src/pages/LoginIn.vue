@@ -10,7 +10,7 @@
                 <el-input v-model="loginForm.username" placeholder="用户名"></el-input>
             </el-form-item>
             <el-form-item prop="password" label="密码">
-                <el-input type="password" v-model="loginForm.password" placeholder="密码"></el-input>
+                <el-input type="password" v-model="loginForm.password" placeholder="密码" @keyup.enter.native="handleLoginIn"></el-input>
             </el-form-item>
 
             <div class="login-btn">
